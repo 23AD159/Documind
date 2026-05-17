@@ -1,0 +1,13 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@documind.ai
+      name: Admin User
+      password: $2b$12$DstnmH..tpqIxqUN7MAR0u2COenmKZL7NCbTOTtA1Z0y9x0CxOX2
+cookie:
+  expiry_days: 30
+  key: documind_secret_key
+  name: documind_cookie
+preauthorized:
+  emails:
+    - admin@documind.ai

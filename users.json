@@ -1,0 +1,17 @@
+{
+  "admin": {
+    "password": "$2b$12$QPNihOYQX7w/UpGqPNI0ROQ67M1iz5.ITOv7G/El.3kG4L1d4VZGm",
+    "email": "admin@documind.ai",
+    "name": "Admin"
+  },
+  "Yamuna": {
+    "password": "$2b$12$boR55.DyiWkzV5mIwX6Q6uIj/xAbrYSwGtOcntIx84jBxxQ4Ho6la",
+    "email": "yamu@gmail.com",
+    "name": "Yamuna"
+  },
+  "User1": {
+    "password": "$2b$12$kiZY1ZKuJn62x9RjOmUaWeLdVk5AheqDz0/Xdh6wfSuZt6/wTGs9y",
+    "email": "user@gmail.com",
+    "name": "User1"
+  }
+}
