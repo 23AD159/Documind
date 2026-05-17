@@ -930,14 +930,24 @@ if st.session_state.authenticated:
             if not graph_data:
                 st.info("No connections found yet. Try indexing more documents!")
             else:
-                import graphviz # type: ignore
-                dot = graphviz.Digraph() # type: ignore
-                dot.attr(bgcolor='transparent', fontcolor='#581C87', rankdir='LR', splines='spline', nodesep='0.6', ranksep='1.0') # type: ignore
-                dot.attr('node', shape='box', style='rounded,filled', fillcolor='#F5F3FF', fontcolor='#581C87', color='#581C87', fontname='Inter, Arial, sans-serif', penwidth='1.5') # type: ignore
-                dot.attr('edge', color='#C4B5FD', fontcolor='#6B7280', fontname='Inter, Arial, sans-serif', fontsize='10', penwidth='1.5') # type: ignore
+                from pyvis.network import Network
+                import streamlit.components.v1 as components
+                
+                net = Network(height='400px', width='100%', bgcolor='#ffffff', font_color='#581C87', directed=True, notebook=True, cdn_resources='remote')
+                net.set_options('{"physics": {"forceAtlas2Based": {"gravitationalConstant": -50, "springLength": 100, "springConstant": 0.08}, "minVelocity": 0.75, "solver": "forceAtlas2Based"}}')
+
+                nodes = set()
                 for s, r, o in graph_data[:20]: # Limit to 20 for performance
-                    dot.edge(s, o, label=r)
-                st.graphviz_chart(dot, use_container_width=True)
+                    if s not in nodes:
+                        net.add_node(s, label=s, color='#F5F3FF', shape='box', font={'color': '#581C87', 'face': 'Inter, Arial, sans-serif'})
+                        nodes.add(s)
+                    if o not in nodes:
+                        net.add_node(o, label=o, color='#F5F3FF', shape='box', font={'color': '#581C87', 'face': 'Inter, Arial, sans-serif'})
+                        nodes.add(o)
+                    net.add_edge(s, o, title=r, label=r, color='#C4B5FD')
+                
+                html_data = net.generate_html()
+                components.html(html_data, height=415)
 
     elif page == "Settings":
         st.markdown("<div class='page-title'>⚙️ Settings</div>", unsafe_allow_html=True)
