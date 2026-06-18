@@ -24,23 +24,6 @@ Fixed the indentation structure in `app.py` to ensure:
 - Page selection works immediately
 - All 5 pages are fully accessible
 
-### Additional Fix ✅
-
-Updated `requirements.txt` to use compatible package versions that don't require compilation on Windows.
-
----
-
-## 🚀 Quick Start
-
-### Run the App
-
-```bash
-cd "c:\Users\Yamuna Shri.T\Downloads\DocuMind"
-streamlit run app.py
-```
-
-Open your browser to: **http://localhost:8501**
-
 ### See All Pages
 
 The sidebar now displays all 5 pages:
@@ -50,33 +33,6 @@ The sidebar now displays all 5 pages:
 - 📋 Summaries
 - 📚 Document Library
 - ⚙️ Settings
-
----
-
-## 📖 Documentation
-
-### For Complete Setup Instructions
-
-👉 **Read**: [SETUP_AND_USAGE_GUIDE.md](SETUP_AND_USAGE_GUIDE.md)
-
-Covers:
-
-- How each page works
-- Feature explanations
-- Core technologies
-- Best practices
-- Troubleshooting
-
-### For Technical Details
-
-👉 **Read**: [FIXES_APPLIED.md](FIXES_APPLIED.md)
-
-Covers:
-
-- Exact issues fixed
-- Code changes made
-- Verification steps
-- System status
 
 ---
 
@@ -295,22 +251,8 @@ DocuMind/
 5. **Configure API**: Add Gemini key in Settings for full power
 
 ---
-
-## 📞 Need Help?
-
-Refer to:
-
-- 📖 **SETUP_AND_USAGE_GUIDE.md** - Complete feature documentation
-- 🔧 **FIXES_APPLIED.md** - Technical details of fixes
-- 💬 **Chat / Q&A page** - Hover over icons for help text
-
 ---
 
-## 🚀 That's It!
-
-Your DocuMind application is **100% functional** and ready to use.
-
-**All 5 pages are working perfectly.**
 
 Happy document querying! 🎉
 
